@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    background-color: #020122;
+    color: #020122;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+a {
+    color: inherit;
+}
+
+/** universal styles **/
+.work-sans {
+    font-family: 'Henny Penny', cursive;
+}
+
+.orange {
+    color: #eb5e28;
+}
+
+.dark-blue {
+    color: #020122;
+}
+
+/** header **/
+#header > h1 {
+    text-align: center;
+}
+
+#header {
+    background-color: #fffcf2;
+    padding: 20px 0;
+}
+
+/** main **/
+
+
+/***** navigation **/
+.nav {
+    text-align: center;
+    border-bottom: #eb5e28 solid 2px;
+    border-top: #eb5e28 solid 2px;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background-color: transparent;
+    color: inherit;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/***** locations **/
+#main {
+    background-color: #fffcf2;
+    margin-top: 10px;
+    padding: 2rem;
+}
+
+#main > ul > li > a {
+    font-family: 'Lora', serif;
+    font-weight: 500;
+}
+
+#locations h1 {
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+#locations .name {
+    font-family: 'Lora', serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: inline;
+    border-bottom: #eb5e28 solid 2px;
+}
+
+#locations .name :hover {
+    color: inherit;
+    text-decoration: none;
+}

@@ -54,6 +54,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 #hero-header > a:hover {
@@ -72,10 +73,22 @@ nav {
 }
 
 /** Areas Section **/
-#bar {
+.bar {
     background-color: #eb5e28;
     width: 100%;
-    height: 60px;
+    /* height: 40px; */
+
+    margin: 20px 0;
+}
+
+.area {
+    color: #020122;
+}
+
+.area:hover {
+    color: #020122;
+    font-weight: 700;
+    text-decoration: none;
 }
 
 /** Locations Section **/
@@ -88,4 +101,18 @@ nav {
     border-bottom: #eb5e28 solid 1px;
     font-size: 2rem;
     font-weight: 700;
+}
+
+/** footer **/
+footer {
+    text-align: center;
+    font-weight: 100;
+}
+
+footer > p {
+    font-style: italic;
+}
+
+footer a {
+    text-decoration: underline;
 }

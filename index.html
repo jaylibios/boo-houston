@@ -3,32 +3,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="./css/style.css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="./src/script.js" type="module"></script>
     <title>BOO HOUSTON</title>
 </head>
 <body>
-    
-    <section class="container">
 
-        <div class="w-100 text-center jumbotron jumbotron-fluid vertical-center">
-            <div id="hero-header">
-                <h1 class="creepster page-title title orange">Boo Houston</h1>
-                <a href="#areas" id="viewAreas">Houston Haunted Houses</a>
-            </div>
-        </div>
-        
+    <section id="header" class="container">
+            <h1 class="work-sans orange">Boo Houston</h1>
+            <section id="main">
+                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <a class="nav-link" id="pills-north-tab" data-toggle="pill" href="#pills-north" role="tab" aria-controls="pills-north" aria-selected="false">North</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a class="nav-link" id="pills-east-tab" data-toggle="pill" href="#pills-east" role="tab" aria-controls="pills-east" aria-selected="false">East</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a class="nav-link" id="pills-central-tab" data-toggle="pill" href="#pills-central" role="tab" aria-controls="pills-central" aria-selected="false">Central</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="pills-south-tab" data-toggle="pill" href="#pills-south" role="tab" aria-controls="pills-south" aria-selected="false">South</a>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="pills-west-tab" data-toggle="pill" href="#pills-west" role="tab" aria-controls="pills-west" aria-selected="false">West</a>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <a class="nav-link active" id="pills-all-tab" data-toggle="pill" href="#pills-all" role="tab" aria-controls="pills-all" aria-selected="true">All</a>
+                      </li>
+                </ul>
+                <div id="locations" class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade" id="pills-north" role="tabpanel" aria-labelledby="pills-north-tab"></div>
+                <div class="tab-pane fade" id="pills-east" role="tabpanel" aria-labelledby="pills-east-tab"></div>
+                <div class="tab-pane fade" id="pills-central" role="tabpanel" aria-labelledby="pills-central-tab"></div>
+                <div class="tab-pane fade" id="pills-south" role="tabpanel" aria-labelledby="pills-south-tab"></div>
+                <div class="tab-pane fade" id="pills-west" role="tabpanel" aria-labelledby="pills-west-tab"></div>
+                <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab"></div>
+                </div>
+
+                <p>Not seeing your favorite haunted house? <a href="#" class="font-italic">Send a request.</a></p>
+            </section>
     </section>
 
-    <section id="areas">
-        <div id="bar"></div>
-        <nav id="navigation"></nav>
-    </section>
-
-    <section id="locations">
-        <div id="loc"></div>
-    </section>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
 </body>
 </html>

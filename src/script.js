@@ -1,26 +1,44 @@
 import { areaLocations } from './locations.js';
 
-$(document).ready(function(){
+$(document).ready(() => {
+    let locations = document.getElementById("locations");
+    
+    let all = document.getElementById("pills-all");
+    let north = document.getElementById("pills-north");
+    let east = document.getElementById("pills-east");
+    let central = document.getElementById("pills-central");
+    let south = document.getElementById("pills-south");
+    let west = document.getElementById("pills-west");
 
-    const areas = ["Northside", "Southside", "Central", "Katy", "Westside", "Eastside"];
-    let navigation = document.getElementById("navigation");
-    let location = document.getElementById("loc");
+    // populate locations on load
+    areaLocations.forEach(a => all.innerHTML += `
+    <p class="name"><a href="${a.url}" target="_blank">${a.name}</a></p><br>
+    <p>${a.address1}<br>${a.address2}</p>`);
+    
+    // north locations
+    areaLocations.filter(a => a.area == "north").forEach(loc => north.innerHTML += `
+    <p class="name"><a href="${loc.url}" target="_blank">${loc.name}</a></p><br>
+    <p>${loc.address1}<br>${loc.address2}</p>`);
 
-    // Populate navigation
-    areas.forEach(a => navigation.innerHTML += ` <li><a href="#locations" class='area' id='${a}'>${a}</a></li> `);
+    // east
+    areaLocations.filter(a => a.area == "east").forEach(loc => east.innerHTML += `
+    <p class="name"><a href="${loc.url}" target="_blank">${loc.name}</a></p><br>
+    <p>${loc.address1}<br>${loc.address2}</p>`);
 
-    // Show location information on click
-    $(".area").click((event) => {
-        location.innerHTML = "";
-        let area = event.target.innerHTML.toLowerCase();
-        let list = areaLocations.filter(al => al.area == area);
-        
-        list.forEach(elem => {
-            location.innerHTML += ` 
-            <p class="name">${elem.name}</p>
-            <p class="address">${elem.address1}<br>${elem.address2}</p>
-            <p class="website"><a href="${elem.url}" target="_blank">Go to Website</a></p> `;
-        });
-    });
+    // central
+    areaLocations.filter(a => a.area == "central").forEach(loc => central.innerHTML += `
+    <p class="name"><a href="${loc.url}" target="_blank">${loc.name}</a></p><br>
+    <p>${loc.address1}<br>${loc.address2}</p>`);
+
+    // south
+    areaLocations.filter(a => a.area == "south").forEach(loc => south.innerHTML += `
+    <p class="name"><a href="${loc.url}" target="_blank">${loc.name}</a></p><br>
+    <p>${loc.address1}<br>${loc.address2}</p>`);
+
+    // west
+    areaLocations.filter(a => a.area == "west").forEach(loc => west.innerHTML += `
+    <p class="name"><a href="${loc.url}" target="_blank">${loc.name}</a></p><br>
+    <p>${loc.address1}<br>${loc.address2}</p>`);
+
 
 });
